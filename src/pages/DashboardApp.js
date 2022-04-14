@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { faker } from '@faker-js/faker';
 // @mui
 import { useTheme } from '@mui/material/styles';
@@ -22,12 +23,22 @@ import {
 
 export default function DashboardApp() {
   const theme = useTheme();
+  const [message, setMessage] = useState('');
 
   return (
     <Page title="Dashboard">
       <Container maxWidth="xl">
+        <button
+          onClick={() =>
+            fetch('/.netlify/functions/hello')
+              .then((res) => res.json())
+              .then(({ message }) => setMessage(message))
+          }
+        >
+          click me
+        </button>
         <Typography variant="h4" sx={{ mb: 5 }}>
-          Hi, Welcome back
+          Hi, Welcome back : {message}
         </Typography>
 
         <Grid container spacing={3}>

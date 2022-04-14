@@ -10,7 +10,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint --ext .js,.jsx ./src",
-    "lint:fix": "eslint --fix --ext .js,.jsx ./src"
+    "lint:fix": "eslint --fix --ext .js,.jsx ./src",
+    "lambda": "netlify-lambda serve netlify/functions"
   },
   "eslintConfig": {
     "extends": [
@@ -48,6 +49,7 @@
     "date-fns": "^2.28.0",
     "formik": "^2.2.9",
     "history": "^5.2.0",
+    "http-proxy-middleware": "^2.0.4",
     "lodash": "^4.17.21",
     "numeral": "^2.0.6",
     "prop-types": "^15.8.1",
@@ -75,6 +77,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
+    "netlify-lambda": "^2.0.15",
     "prettier": "^2.5.1"
   }
 }
